@@ -1,9 +1,9 @@
 # CITUP2
 
-`citup2.py` builds a mixed-integer model with Gurobi to fit clonal trees to per-mutation cellular prevalence measurements. It enforces rooted-tree structure directly on the parent–child matrix, can honor an optional ancestry mask, and enumerates top k optimal trees that explain the input clusters.
+CITUP2 is a integrative combinatorial optimization framework that reconstructs clonal trees from descendant cell fractions (DCFs) of mutational clusters. Python script (`citup2.py`) builds a mixed-integer model with Gurobi to fit clonal trees to per-mutation cellular prevalence measurements. It enforces rooted-tree structure directly on the parent–child matrix, can honor an optional ancestry mask, and enumerates top k optimal trees that explain the input clusters.
 
 ## Requirements
-- Python with `gurobipy` installed and a valid Gurobi license available in the environment.
+- Python with `gurobipy` installed and a valid Gurobi license available in the environment (install via `pip install -r requirements.txt` once your Gurobi license is configured).
 - Input frequencies file in the tab-separated format below; output directories referenced by `--pathOutputFilePrefix` must already exist.
 
 ## Input Format

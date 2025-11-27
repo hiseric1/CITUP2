@@ -1,10 +1,3 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
-
-# CITUP fit-only pipeline that enumerates near-optimal trees (no MACHINA stages).
-# NOTE: The ancestry matrix A is removed. Rooted-tree constraints are enforced directly on B; any optional
-#       external ancestry (A_input) is handled via B-only constraints.
-
 from gurobipy import *
 import argparse, os, sys, time
 
@@ -81,7 +74,7 @@ parser.add_argument('--disable-auto-ancestry-caps', action='store_true', default
                     help='Ignore CP-based allowed-edge mask (A_allowed_all) when building B/q/migration variables.')
 
 # Debug
-parser.add_argument('--debug-iis', action='store_true', default=False)
+# parser.add_argument('--debug-iis', action='store_true', default=False)
 
 # Optional preprocessing of observed frequencies
 parser.add_argument('--clip-observed-at', type=float, default=None,
