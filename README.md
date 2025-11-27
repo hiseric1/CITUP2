@@ -39,3 +39,10 @@ Outputs will be written with the given prefix (e.g., `results/run1/cn_fit.tree_0
 - `<prefix>.gurobi.log`: solver log mirrored from Gurobi.
 - `<prefix>.treeScores.tsv`: fit value and root degree for each enumerated tree; best-by-fit is marked.
 - `<prefix>.tree_{k}.txt`: tree structure, cluster/mutation assignments, node/clade frequencies, and residuals for each solution.
+
+## Simulations
+You can generate synthetic inputs and tree visualizations with `simualtons/simulations.py`, which emits `mutations.tsv`, `clusters.tsv`, tree files, and a PNG in the chosen output directory. Example:
+```bash
+python simualtons/simulations.py --tree-size 6 --num-samples 8 --seed 3 --outdir simulations/out1 --run-name demo
+```
+Use `--help` for options to add noise, simulate reads, or change tree size/coverage.
