@@ -805,7 +805,7 @@ with open(args.pathOutputFilePrefix + ".treeScores.tsv","w") as fs:
         fit_val = sol.get("fit")
         fit_str = "NA" if fit_val is None else floatToStr(fit_val)
         fs.write(f"{i}\t{fit_str}\t{rootDeg}\t{best_flag}\n")
-
+print(solutions)
 for i,sol in enumerate(solutions):
     write_solution(i, sol, tag="")
 
